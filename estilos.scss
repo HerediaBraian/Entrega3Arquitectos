@@ -1,3 +1,72 @@
+
+//Colorbg
+$colorbg: #ffc107;
+//finaliza colorbg
+
+//Fuentes para titulos y texto
+@mixin estiloh2{
+    font-family: 'Lilita One', cursive; 
+    color: black;
+    text-align: center;
+}
+
+@mixin estiloh3{
+    font-family: 'Lilita One', cursive; 
+    color: black;
+}
+
+@mixin estilop{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 20px
+}
+
+@mixin estiloh4{
+    font-family: 'Lilita One', cursive; 
+    color: black;
+    text-align: center;
+    background-color: #ffc107;
+}
+//Finaliza Fuentes para titulos y texto
+h2{
+    @include estiloh2();
+}
+
+h3{
+    @include estiloh3();
+}
+
+.row{
+    h4{
+    @include estiloh4();
+    }
+}
+
+p{
+    @include estilop();
+}
+
+.col{
+    h2{
+        font-size: 50px;
+    }
+}
+
+.row{
+    h1{
+        @include estiloh2();
+        margin-bottom: 100px;
+    }
+}
+
+.row{
+    .col{
+        h1{
+            background-color: $colorbg;
+            padding: 50px;
+        }
+    }
+}
+
 .collapse {
     display: flex;
     justify-content: flex-end;
@@ -58,7 +127,6 @@
 .vivitucasa{
     text-align: center;
 }
-
 
 
 /* Inicio boton de whatsapp */
@@ -131,7 +199,7 @@
     color: #ffffff;
     margin-bottom: 25px;
     font-weight: 500;
-    border-bottom: 2px solid orangered;
+    border-bottom: 2px solid #ffc107;;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -167,7 +235,7 @@
 }
 
 .social-link a:hover {
-    background-color: orangered;
+    background-color: #ffc107bb;
 }
 
 .fab{
@@ -187,9 +255,3 @@
 
 /* footer fin */
 
-.row{
-    h1{
-        background-color: #1faf54
-    }   
-}
-@import "_proyecto";
